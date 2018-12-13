@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Monoku</h1>
+	{% if latest_personas_list %}
+    <ul>
+    {% for personas in latest_personas_list %}
+        <li><a href="/monoku/{{ personas.id }}/">{{ personas }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No monoku are available.</p>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Galguerias</h1>
+	{% if latest_galguerias_list %}
+    <ul>
+    {% for galguerias in latest_galguerias_list %}
+        <li><a href="/monoku/{{ galguerias.id }}/">{{ galguerias}}</a></li> 
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No galguerias are available.</p>
+{% endif %}
+
+</body>
+</html>

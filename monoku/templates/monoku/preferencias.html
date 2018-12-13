@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Consumo por persona</h1>
+	{% if latest_preferencias_list %}
+    <ul>
+    {% for preferencias in latest_preferencias_list %}
+        <li><a href="/monoku/{{ preferencias.id }}/">{{ preferencias}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No monoku are available.</p>
+{% endif %}
+
+</body>
+</html>
