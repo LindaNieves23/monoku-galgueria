@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<title></title>
 </head>
 <body>
 
 	<h1>Consumo por persona</h1>
 	{% if latest_preferencias_list %}
-    <ul>
+    <ul class="list-group">
     {% for preferencias in latest_preferencias_list %}
-        <li><a href="/monoku/{{ preferencias.id }}/">{{ preferencias}}</a></li>
+        <li class="list-group-item"><a href="/monoku/{{ preferencias.id }}/">{{ preferencias}}</a></li>
     {% endfor %}
     </ul>
 {% else %}
