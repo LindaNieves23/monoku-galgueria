@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('monoku/', include('monoku.urls')),
+    path('monoku/', include('monoku.urls', namespace="inventario")),
     path('admin/', admin.site.urls),
 ]
