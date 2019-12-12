@@ -16,7 +16,7 @@ from django.contrib.auth import login, authenticate
 def index(request):
     latest_galguerias_list = Galguerias.objects.order_by('nombre_producto', 'tipo', 'cantidad_producto')
     context = {'latest_galguerias_list': latest_galguerias_list}
-    return render(request, 'monoku/index.html', context)
+    return render(request, 'monoku/listar_galgerias.html', context)
 
 
 def galgueria(request):

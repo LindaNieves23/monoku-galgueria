@@ -1,0 +1,20 @@
+ {% extends 'monoku/index.html' %}
+
+{% block content %}
+  <div class="jumbotron">
+        <h1 class="display-4">Galguerias</h1>    
+    </div>	
+	{% if latest_galguerias_list %}
+        <ul class="list-group">
+        {% for galguerias in latest_galguerias_list %}
+            <li class="list-group-item"><a href="/monoku/{{ galguerias.id }}/">{{ galguerias}}</a></li> 
+        {% endfor %}
+        </ul>
+    {% else %}
+        <div class="alert alert-primary" role="alert">
+            <p>No galguerias are available.</p>
+        </div>
+    {% endif %}
+{% endblock %}
+
+ 
